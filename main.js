@@ -10,7 +10,7 @@ const getTime = ({hours, minutes, seconds, zone}) => {
         minutes = "0" + minutes;
     }
     if(seconds / 10 < 1){
-        seconds = "0" + seconds;
+        seconds = "0" + seconds; 
     }
 
     return `${hours}:${minutes}:${seconds} ${zone}`;
