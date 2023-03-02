@@ -15,7 +15,7 @@ const getTime = ({hours, minutes, seconds, zone}) => {
 
     return `${hours}:${minutes}:${seconds} ${zone}`;
 }
-
+ 
 // display time
 const renderTime = () => {
     var currentTime = document.getElementById('current-time');
