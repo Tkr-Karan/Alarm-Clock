@@ -1,70 +1,28 @@
-// All variables
-const activeAlarm = document.getElementsByClassName('alarm-active');
-const alarmText = document.getElementById('alarm-data');
+const currentTime = document.getElementById('current-time');
 
 
+// Create currentTime and Display
+function showTime(){
+    const currentDateTime = new Date();
 
-// function which get time
-const getTime = ({hours, minutes, seconds, zone}) => {
-    if(minutes/10 < 1) {
-        minutes = "0" + minutes;
-    }
-    if(seconds / 10 < 1){
-        seconds = "0" + seconds; 
-    } 
+    let hours = currentDateTime.getHours();
+    let minutes = currentDateTime.getMinutes();
+    let seconds = currentDateTime.getSeconds();
 
-    return `${hours}:${minutes}:${seconds} ${zone}`;
-}
-       
-// display time
-const renderTime = () => {
-    var currentTime = document.getElementById('current-time');
-
-    // using Date class mto get the dta of date
-    const currentDate = new Date();
-    let hours = currentDate.getHours();
-    let minutes = currentDate.getMinutes();
-    let seconds = currentDate.getSeconds();
-
-    let zone = (hours >= 12) ? "PM" : "AM";
+    let zone = (hours >= 12 ) ?  "PM" : "AM";
     if(hours > 12) hours %= 12;
 
-    const time = getTime({hours, minutes, seconds, zone});
-    //using innerHTML for displaying Time
-    currentTime.innerHTML = time;
-};
+    currentTime.innerHTML = `${hours}:${minutes}:${seconds} ${zone}`; 
+}
 
-//updating time every second
-setInterval(renderTime, 1000);
+setInterval(showTime, 1000);
 
 
-// value of current alarm
-let alarmString = null;
-
-// Handling Alarm
-const handleSubmit = (e) => {
-    e.preventDefault();
-    const { hour, min, sec, zone } = document.forms[0];
-    alarmString = getTime({
-        hours: hour.value,
-        minutes: min.value,
-        seconds: sec.value,
-        zone: zone.value,
-        
-    });
-
-    //Reseting after submit
-    document.forms[0].reset();
-
-    // Hide create alarm
-  createAlarm.style.display = "none";
-
-  // show active alarm with text
-  activeAlarm.style.display = "block";
-
-    alarmText.innerHTML = alarmText(alarmString);
-};
-
-
-// adding submit to the forms
-// document.forms[0].addEventListener("submit", handleSubmit);
+// Setting up the Alarm
+const setAlarm = document.getElementsByClassName('set-alarm');
+const rmvBtn = document.getElementById('rmv-alarm');
+const alarmText = document.getElementsByClassName('alarm-data');
+setAlarm.addEventListener("click", function(){
+    alarmText.innerHTML = `${hours}:${minutes}:${seconds} ${zone}`
+    // rmvBtn.innerHTML = "button clicked";
+})

@@ -1,3 +1,29 @@
 *{
     font-family: 'Courier New', Courier, monospace;
 }
+
+.alarm-head{
+    text-align: center;
+}
+
+.alarm-container{
+    /* border: 2px solid black; */
+    text-align: center;
+}
+
+.alarmInputs input{
+    width: 60px;
+}
+
+.set-alarm{
+    margin-top: 10px;
+
+}
+
+.alarm-active{
+
+    border: 2px solid black;
+    height: 100px;
+    text-align: center;
+    margin-top: 10px;
+}
