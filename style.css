@@ -1,29 +1,30 @@
 *{
-    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
 }
 
-.alarm-head{
-    text-align: center;
-}
 
-.alarm-container{
+.clock-wrapper{
     /* border: 2px solid black; */
+    width: 100%;
+    height: 100vh;
+    background-color: indianred;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+}
+
+.clock-container{
+    background-color: rgba(134, 209, 12, 0.768);
+    width: 200px;
+    height: 200px;
     text-align: center;
-}
-
-.alarmInputs input{
-    width: 60px;
-}
-
-.set-alarm{
-    margin-top: 10px;
-
-}
-
-.alarm-active{
-
     border: 2px solid black;
-    height: 100px;
-    text-align: center;
-    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: -20px -20px 15px rgba(0, 0, 0, 0.26)
+}
+
+.clock-container img{
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
 }

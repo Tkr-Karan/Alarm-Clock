@@ -19,10 +19,15 @@ setInterval(showTime, 1000);
 
 
 // Setting up the Alarm
-const setAlarm = document.getElementsByClassName('set-alarm');
-const rmvBtn = document.getElementById('rmv-alarm');
-const alarmText = document.getElementsByClassName('alarm-data');
-setAlarm.addEventListener("click", function(){
-    alarmText.innerHTML = `${hours}:${minutes}:${seconds} ${zone}`
-    // rmvBtn.innerHTML = "button clicked";
-})
+// const addAlarm = document.getElementsByClassName('set-alarm');
+// const rmvBtn = document.getElementById('rmv-alarm');
+// const alarmText = document.getElementsByClassName('alarm-data');
+
+// addAlarm.addEventListener('submit', e  => {
+//     // save for reloading again and again
+//     e.preventDefault();
+
+//     const newAlarm = addAlarm.showTime.value;
+
+//     console.log(newAlarm);
+// })

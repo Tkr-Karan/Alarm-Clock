@@ -10,69 +10,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="alarm-head">
-        <h1> ⏰My Alarmy⏰ </h1>
-
-    </div>
-    <div class="alarm-container">
-        <div class="currTime">
-            <h3>Time : <span id="current-time"></span></h3>
-        </div>
-
-        <div class="setAlarm">
-            <div>Set Alarm</div>
-            <div class="alarm-form">
-                <form action="">
-                    <div class="alarmInputs">
-                        <input 
-                            type="number"
-                            name="hour"
-                            min="0"
-                            max="12"
-                            placeholder="Hrs"
-                            required
-                        />
-                        <input 
-                            type="number"
-                            name="min"
-                            min="0"
-                            max="60"
-                            placeholder="min"
-                            required
-                        />
-                        <input 
-                            type="number"
-                            name="sec"
-                            min="0"
-                            max="60"
-                            
-                            placeholder="sec"
-                            required
-                        />
-                        <select name="zone" id="time-zone">
-                            <option value="" selected disabled> zone</option>
-                            <option value="AM">AM</option>
-                            <option value="PM">PM</option>
-                        </select>
-                    </div>
-
-                    <button class="set-alarm">Submit</button>
-                </form>
-            </div>
+    <div class="clock-wrapper">
+        <div class="clock-container">
+            <img src="https://cdn-icons-png.flaticon.com/512/10028/10028912.png" alt="clock">
+            <div class="show-time">00:00:00</div>
         </div>
     </div>
-
-    <div class="alarm-active">
-        <div class="alarm-data">
-            <h4></h4>
-        </div>
-        <button id="rmv-alarm">Remove Alarm</button>
-    </div>
-
-    <audio src="./audio/mixkit-alert-alarm-1005.wav"></audio>
-
-
-    <script src="./main.js"></script>
     
 </body >
 </html>
